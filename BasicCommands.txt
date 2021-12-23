@@ -1,0 +1,13 @@
+a) How to revert from staging area.
+  1. git add <filename>
+  2. git reset HEAD -- <filename>
+  3. git checkout -- <filename>
+
+b) How to create alias & see logs
+
+  1. git log --oneline --graph --decorate --all
+  2. git config --global alias.hist --oneline --graph --decorate --all
+  3. git config --global --list
+  4. git hist
+  5. git hist -- <filename>
+  
