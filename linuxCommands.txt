@@ -1,0 +1,65 @@
+1) Translate from upper to lower
+
+tr '[:upper:]' '[:lower:]' <xyz.txt
+
+2) Translate from lower to uppercase letter
+
+tr '[:lower:]' '[:upper:]' <xyz.txt
+
+3) Translate specific letter
+
+tr 'i' 'I' < xyz.txt
+
+4) cat xyz.txt | tr " " "_"
+
+5) -d deletes
+Q) Write a linux command to print 3rd text in docker -v . Delete comma also
+
+docker -v | cut -d " " -f 3 | tr -d ','
+
+Tee command
+
+Q) Write a command to copy the result of a command to xyz.txt file , given command is ls -lrt
+A) ls -lrt > xyz.txt
+
+Q) Write a command to print and also copy the result at same time to xyz.txt file
+A) ls -lrt | tee xyz.txt
+
+Q) Write a command to append to the file
+A) date | tee xyz.txt
+    uptime | tee -a xyz.txt
+    ls -lrt | tee -a xyz.txt
+    
+----------
+  GREP 
+----------
+grep [options] "string/pattern" file/files
+cat file | grep [options] "string/pattern" file/files
+echo "some text" | grep [options] "string/pattern" file/files
+
+grep "method" 4_initiate_release.json 5_search_release.json -> two files
+grep "method" * -> all files
+
+echo "This is a text" | grep "text".  -> first command provides output which becomes input in second command
+
+Options 
+---------
+
+-i -> ignore case sensitivity
+-w -> match whole word (exact match)
+-v -> lines which don't have the string , like complement
+-o -> print only matched words,not whole line
+-n -> display matched line numbers
+-no -> line number and matched word
+-c -> display matched number of lines
+-cw -> matched lines for exact words
+-
+
+
+
+
+
+
+
+
+
